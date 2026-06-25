@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио · Аксана Матанова</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.8rem;
+      background: #0c0c0e;
+      background-image: 
+        radial-gradient(circle at 20% 30%, rgba(100, 70, 180, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(200, 100, 50, 0.06) 0%, transparent 50%);
+    }
+
+    .portfolio {
+      max-width: 1380px;
+      width: 100%;
+      background: rgba(18, 20, 26, 0.75);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-radius: 4rem;
+      padding: 2.8rem 3.2rem;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      transition: box-shadow 0.25s;
+      display: flex;
+      flex-direction: column;
+      gap: 2.2rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.04);
+      position: relative;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 120px;
+      height: 2px;
+      background: linear-gradient(90deg, #b38bff, #f6a085, #b38bff);
+      background-size: 200% 100%;
+      animation: shimmer 4s ease-in-out infinite;
+      border-radius: 4px;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 0%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6f5f9b, #b38bff);
+      padding: 3px;
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .avatar:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(179, 139, 255, 0.3);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #1a1e26;
+    }
+
+    .name-title h1 {
+      font-size: 3.2rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      background: linear-gradient(145deg, #f2ede8, #d2c9c0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    .name-title .tagline {
+      font-weight: 300;
+      color: #9ca8b9;
+      font-size: 0.95rem;
+      letter-spacing: 0.8px;
+      padding-left: 1rem;
+      border-left: 2px solid #9f8bbf;
+      margin-top: 0.2rem;
+    }
+
+    .contacts {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .contacts a {
+      text-decoration: none;
+      color: #ffffff !important;
+    }
+
+    .contact-item {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.6rem 1.6rem;
+      border-radius: 60px;
+      color: #ffffff !important;
+      font-weight: 400;
+      font-size: 1rem;
+      backdrop-filter: blur(2px);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+      letter-spacing: 0.3px;
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: #b38bff;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 6px 25px rgba(179, 139, 255, 0.2);
+      color: #ffffff !important;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.9rem;
+    }
+
+    .nav-btn {
+      background: #1a1e26;
+      border: 1px solid #262c36;
+      padding: 0.9rem 0.2rem;
+      border-radius: 80px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 1.05rem;
+      color: #b7c5d9;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.15, 0.9, 0.25, 1.3);
+      letter-spacing: 0.2px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .nav-btn:hover::before {
+      opacity: 1;
+    }
+
+    .nav-btn:hover {
+      background: #262e3a;
+      color: #f0f4fe;
+      transform: translateY(-3px) scale(1.02);
+      border-color: #5d738d;
+    }
+
+    .nav-btn.active {
+      background: #6f5f9b;
+      color: #ffffff;
+      border-color: #b8a1d9;
+      box-shadow: 0 10px 24px -6px rgba(80, 50, 140, 0.4);
+      transform: translateY(-2px) scale(1.02);
+      font-weight: 600;
+    }
+
+    .content-card {
+      background: rgba(12, 14, 19, 0.5);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 2.8rem;
+      padding: 2.2rem 2.8rem;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+      box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.2), 0 8px 32px rgba(0, 0, 0, 0.2);
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s;
+    }
+
+    .content-inner {
+      width: 100%;
+      animation: floatIn 0.5s cubic-bezier(0.08, 0.82, 0.17, 1);
+    }
+
+    @keyframes floatIn {
+      0% { opacity: 0; transform: translateY(22px) scale(0.96) rotateX(3deg); }
+      100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0); }
+    }
+
+    .content-inner h2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #f0f3fa;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, #ece4f0, #cfd8e8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+      border-left: 5px solid #a68fd4;
+      padding-left: 1.4rem;
+    }
+
+    .content-inner p, .content-inner li {
+      color: #d3deee;
+      line-height: 1.7;
+      font-weight: 300;
+      font-size: 1.05rem;
+    }
+
+    .content-inner ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.8rem;
+      margin-top: 0.3rem;
+    }
+
+    .content-inner ul li {
+      position: relative;
+      padding-left: 1.2rem;
+    }
+
+    .content-inner ul li::before {
+      content: "◆";
+      position: absolute;
+      left: -0.2rem;
+      color: #b197d9;
+      font-size: 0.8rem;
+      top: 0.1rem;
+    }
+
+    .project-item {
+      background: rgba(30, 38, 50, 0.7);
+      backdrop-filter: blur(2px);
+      padding: 0.6rem 1.6rem;
+      border-radius: 60px;
+      display: inline-block;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #38434f;
+      font-weight: 400;
+      color: #dae3f2;
+      transition: 0.15s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .project-item:hover {
+      background: #2f3b4b;
+      border-color: #7b8ba5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(179, 139, 255, 0.15);
+    }
+
+    .project-item strong {
+      color: #cbb8ed;
+      font-weight: 500;
+    }
+
+    .contact-block {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .contact-block .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 60px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .contact-block .contact-row:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-block .contact-row .label {
+      color: #94a6be;
+      font-weight: 300;
+      min-width: 70px;
+    }
+
+    .contact-block .contact-row .value {
+      color: #e8edf5;
+      font-weight: 400;
+    }
+
+    .extra-contacts {
+      margin-top: 0.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 2.2rem;
+      color: #94a6be;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.02);
+      padding-top: 1.3rem;
+    }
+
+    .extra-contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.01);
+      padding: 0.2rem 0.8rem 0.2rem 0.4rem;
+      border-radius: 40px;
+      transition: all 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: #94a6be;
+      border: 1px solid transparent;
+    }
+
+    .extra-contact-link:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.08);
+      color: #d0dcee;
+      transform: translateY(-1px);
+    }
+
+    .extra-contact-link i {
+      font-style: normal;
+      opacity: 0.5;
+      font-weight: 300;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(30, 35, 45, 0.95);
+      backdrop-filter: blur(8px);
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      color: #e0e8f0;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 780px) {
+      .portfolio { padding: 1.8rem; }
+      .name-title h1 { font-size: 2.4rem; }
+      .nav-grid { grid-template-columns: repeat(2, 1fr); }
+      .content-card { padding: 1.8rem; }
+      .header-left { gap: 1rem; }
+      .avatar { width: 60px; height: 60px; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-grid { grid-template-columns: 1fr 1fr; }
+      .header { flex-direction: column; align-items: flex-start; }
+      .content-inner h2 { font-size: 1.6rem; }
+      .contact-block .contact-row {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+      }
+      .avatar { width: 50px; height: 50px; }
+      .extra-contacts { gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="portfolio">
+
+  <div class="header">
+    <div class="header-left">
+      <div class="avatar" id="avatarContainer">
+        <!-- Сүрөтүңүздүн шилтемесин алмаштырыңыз -->
+        <img src="photo.jpg.jpeg" alt="Аксананын сүрөтү" id="profilePhoto" />
+      </div>
+      <div class="name-title">
+        <h1>Аксана Матанова</h1>
+        <div class="tagline">Frontend веб-разработчик · ИТ-студент</div>
+      </div>
+    </div>
+    <div class="contacts">
+      <a href="mailto:aksana.matanova.350@gmail.com" class="contact-item" id="emailContact">
+        ✉ aksana.matanova.350@gmail.com
+      </a>
+      <a href="tel:+996556323537" class="contact-item" id="phoneContact">
+        📱 +996 556 323 537
+      </a>
+    </div>
+  </div>
+
+  <div class="nav-grid" id="navGrid">
+    <button class="nav-btn active" data-section="about" data-color="#6f5f9b">👤 Мен жөнүндө</button>
+    <button class="nav-btn" data-section="skills" data-color="#a87b5a">⚡ Көндүмдөр</button>
+    <button class="nav-btn" data-section="hobbies" data-color="#5f8f7a">🎯 Кызыкчылыктар</button>
+    <button class="nav-btn" data-section="projects" data-color="#bb8a6a">🚀 Долбоорлор</button>
+    <button class="nav-btn" data-section="contacts" data-color="#8a7a9f">📬 Байланыш</button>
+  </div>
+
+  <div class="content-card" id="contentCard">
+    <div class="content-inner" id="contentInner">
+      <h2>👋 Салам, мен Аксана</h2>
+      <p>Мен веб-разработканы изилдеп жаткан студентмин. HTML, CSS жана JavaScript аркылуу сайттарды түзөмүн. Мен жөнөкөй жана заманбап дизайндарды жасоого кызыгам жана өз долбоорлорумду иштеп чыгам.</p>
+      <p style="margin-top: 0.8rem; opacity: 0.6;">📍 Кыргызстан · 2 жылдык тажрыйба</p>
+    </div>
+  </div>
+
+  <!-- Кошумча байланыштар -->
+  <div class="extra-contacts" id="extraContacts">
+    <a href="https://t.me/Akutay" target="_blank" class="extra-contact-link" data-url="https://t.me/Akutay">
+      <i>📌</i> Telegram: @Akutay
+    </a>
+    <a href="https://instagram.com/aksynth" target="_blank" class="extra-contact-link" data-url="https://instagram.com/aksynth">
+      <i>📷</i> Instagram: @aksynth
+    </a>
+  </div>
+</div>
+
+<div class="toast" id="toast">🚀 Сайтка өтүү...</div>
+
+<script>
+  (function() {
+    // Бөлүмдөр үчүн мазмун
+    const contentMap = {
+      about: {
+        title: '👋 Салам, мен Аксана',
+        body: `
+          <p>Мен веб-разработканы изилдеп жаткан студентмин. HTML, CSS жана JavaScript аркылуу сайттарды түзөмүн. Мен жөнөкөй жана заманбап дизайндарды жасоого кызыгам жана өз долбоорлорумду иштеп чыгам.</p>
+          <p style="margin-top: 0.8rem; opacity: 0.6;">📍 Кыргызстан · 2 жылдык тажрыйба</p>
+          <p style="margin-top: 0.5rem; background: rgba(255,255,255,0.02); padding: 0.6rem 1.2rem; border-radius: 40px; display: inline-block;">✨ Азыр HTML, CSS, JavaScriptти тереңдетип үйрөнүп жатам</p>
+        `
+      },
+      skills: {
+        title: '⚡ Көндүмдөр жана куралдар',
+        body: `
+          <ul>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>Адаптивдүү дизайн (телефон/ПК)</li>
+            <li>Сайттарды түзүү</li>
+            <li>Колдонуучу интерфейсинин дизайнынын негиздери</li>
+          </ul>
+          <p style="margin-top: 1rem; color: #b2c4db;">Тынымсыз өнүгүп, жаңы технологияларды үйрөнүп жатам.</p>
+        `
+      },
+      hobbies: {
+        title: '🎯 Кызыкчылыктар жана шыктандыруучу нерселер',
+        body: `
+          <p>Иштен сырткары мен төмөнкүлөрдөн ырахат алам:</p>
+          <ul>
+            <li>🎧 Музыка угуу</li>
+            <li>🎬 Кино тармагында иштөө</li>
+            <li>🎨 Сүрөт тартуу</li>
+            <li>📱 TikTok / YouTube көрүү</li>
+            <li>🏐 Волейбол ойноо</li>
+            <li>📚 Китеп окуу</li>
+          </ul>
+          <p style="margin-top: 0.8rem;">Бул кызыкчылыктар мага шык таап, турмушта тең салмактуулукту сактоого жардам берет.</p>
+        `
+      },
+      projects: {
+        title: '🚀 Менин долбоорлорум',
+        body: `
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+            <a href="https://aksanamatanova350-cmd.github.io/game/" target="_blank" class="project-item">
+              <strong>🧺 Түшүм жыйноо</strong> — JavaScript оюну
+            </a>
+            <a href="https://aksanamatanova350-cmd.github.io/grafik/" target="_blank" class="project-item">
+              <strong>📋 Менин тапшырмаларым</strong> — канбан тактасы
+            </a>
+            <a href="https://aksanamatanova350-cmd.github.io/-/" target="_blank" class="project-item">
+              <strong>🔐 Сырсөз генератору</strong> — ойлоп табуучу сайт
+            </a>
+            <a href="https://aksanamatanova350-cmd.github.io/online-booking/" target="_blank" class="project-item">
+              <strong>📅 Онлайн брондоп алуу</strong> — брондоп алуу системасы
+            </a>
+          </div>
+          <p style="margin-top: 1.2rem;">Ар бир долбоор — бул менин веб-разработкадагы өсүшүмдүн бир кадамы.</p>
+        `
+      },
+      contacts: {
+        title: '📬 Байланыш',
+        body: `
+          <div class="contact-block">
+            <div class="contact-row" onclick="window.location.href='mailto:aksana.matanova.350@gmail.com'">
+              <span class="label">📧 Email</span>
+              <span class="value">aksana.matanova.350@gmail.com</span>
+            </div>
+            <div class="contact-row" onclick="window.location.href='tel:+996556323537'">
+              <span class="label">📱 Телефон</span>
+              <span class="value">+996 556 323 537</span>
+            </div>
+            <div class="contact-row" onclick="window.open('https://t.me/Akutay','_blank')">
+              <span class="label">📌 Telegram</span>
+              <span class="value">@Akutay</span>
+            </div>
+            <div class="contact-row" onclick="window.open('https://instagram.com/aksynth','_blank')">
+              <span class="label">📷 Instagram</span>
+              <span class="value">@aksynth</span>
+            </div>
+            <p style="margin-top: 0.8rem; color: #94a6be; font-size: 0.9rem;">📍 Кыргызстан · Жаңы мүмкүнчүлүктөргө дайым ачык!</p>
+          </div>
+        `
+      }
+    };
+
+    const navButtons = document.querySelectorAll('.nav-btn');
+    const contentInner = document.getElementById('contentInner');
+    const toast = document.getElementById('toast');
+    let toastTimeout = null;
+
+    function showToast(message = '🚀 Сайтка өтүү...') {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 1500);
+    }
+
+    // Бөлүмдөр боюнча навигация
+    function setActiveSection(sectionId, buttonElement) {
+      navButtons.forEach(btn => btn.classList.remove('active'));
+
+      if (buttonElement) {
+        buttonElement.classList.add('active');
+        const color = buttonElement.dataset.color || '#6f5f9b';
+        buttonElement.style.background = color;
+        buttonElement.style.borderColor = color;
+        navButtons.forEach(btn => {
+          if (btn !== buttonElement) {
+            btn.style.background = '';
+            btn.style.borderColor = '';
+          }
+        });
+      }
+
+      const data = contentMap[sectionId];
+      if (data) {
+        contentInner.innerHTML = `<h2>${data.title}</h2>${data.body}`;
+        contentInner.style.animation = 'none';
+        requestAnimationFrame(() => {
+          contentInner.style.animation = 'floatIn 0.5s cubic-bezier(0.08, 0.82, 0.17, 1)';
+        });
+      }
+    }
+
+    document.getElementById('navGrid').addEventListener('click', function(e) {
+      const btn = e.target.closest('.nav-btn');
+      if (!btn) return;
+      const section = btn.dataset.section;
+      if (section) {
+        setActiveSection(section, btn);
+      }
+    });
+
+    // Кошумча байланыштарды басуу
+    document.getElementById('extraContacts').addEventListener('click', function(e) {
+      const link = e.target.closest('.extra-contact-link');
+      if (link) {
+        showToast('🚀 Сайтка өтүү...');
+      }
+    });
+
+    // "Байланыш" бөлүмүндөгү байланыштарды басуу
+    document.getElementById('contentInner').addEventListener('click', function(e) {
+      const contactRow = e.target.closest('.contact-row');
+      if (contactRow) {
+        showToast('🚀 Сайтка өтүү...');
+      }
+    });
+
+    // Аватарды басуу
+    document.getElementById('avatarContainer').addEventListener('click', function() {
+      showToast('📸 Бул сизсиз!');
+    });
+
+    // Инициализация
+    const initialActive = document.querySelector('.nav-btn.active');
+    if (initialActive) {
+      const color = initialActive.dataset.color || '#6f5f9b';
+      initialActive.style.background = color;
+      initialActive.style.borderColor = color;
+      const section = initialActive.dataset.section;
+      if (section && contentMap[section]) {
+        const data = contentMap[section];
+        contentInner.innerHTML = `<h2>${data.title}</h2>${data.body}`;
+      }
+    } else {
+      const firstBtn = document.querySelector('.nav-btn[data-section="about"]');
+      if (firstBtn) {
+        firstBtn.classList.add('active');
+        const color = firstBtn.dataset.color || '#6f5f9b';
+        firstBtn.style.background = color;
+        firstBtn.style.borderColor = color;
+        setActiveSection('about', firstBtn);
+      }
+    }
+  })();
+</script>
+</body>
+</html>
