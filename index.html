@@ -2,7 +2,7 @@
 <html lang="ky">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
   <title>Портфолио · Аксана Матанова</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,27 +20,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1.8rem;
-      background: #0c0c0e;
+      padding: 1rem;
+      background: #0a0e1a;
       background-image: 
-        radial-gradient(circle at 20% 30%, rgba(100, 70, 180, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(200, 100, 50, 0.06) 0%, transparent 50%);
+        radial-gradient(circle at 20% 30%, rgba(40, 60, 140, 0.3) 0%, transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(30, 50, 120, 0.2) 0%, transparent 60%);
     }
 
     .portfolio {
       max-width: 1380px;
       width: 100%;
-      background: rgba(18, 20, 26, 0.75);
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      border-radius: 4rem;
-      padding: 2.8rem 3.2rem;
-      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.02);
+      background: rgba(14, 20, 40, 0.92);
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+      border-radius: 2.5rem;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(60, 80, 180, 0.1);
+      border: 1px solid rgba(60, 80, 180, 0.08);
       transition: box-shadow 0.25s;
       display: flex;
       flex-direction: column;
-      gap: 2.2rem;
+      gap: 1.6rem;
     }
 
     .header {
@@ -48,9 +48,9 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1.2rem 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px dashed rgba(255, 255, 255, 0.04);
+      gap: 1rem 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px dashed rgba(60, 80, 180, 0.15);
       position: relative;
     }
 
@@ -59,9 +59,9 @@
       position: absolute;
       bottom: -1px;
       left: 0;
-      width: 120px;
+      width: 80px;
       height: 2px;
-      background: linear-gradient(90deg, #b38bff, #f6a085, #b38bff);
+      background: linear-gradient(90deg, #6b8cff, #a78bfa, #6b8cff);
       background-size: 200% 100%;
       animation: shimmer 4s ease-in-out infinite;
       border-radius: 4px;
@@ -76,15 +76,16 @@
     .header-left {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .avatar {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #6f5f9b, #b38bff);
-      padding: 3px;
+      background: linear-gradient(135deg, #4a6cf7, #7c5cfc);
+      padding: 2.5px;
       flex-shrink: 0;
       transition: all 0.3s ease;
       cursor: pointer;
@@ -92,7 +93,7 @@
 
     .avatar:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(179, 139, 255, 0.3);
+      box-shadow: 0 0 30px rgba(74, 108, 247, 0.3);
     }
 
     .avatar img {
@@ -101,33 +102,33 @@
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      background: #1a1e26;
+      background: #0a0e1a;
     }
 
     .name-title h1 {
-      font-size: 3.2rem;
+      font-size: 1.8rem;
       font-weight: 600;
-      letter-spacing: -0.03em;
-      background: linear-gradient(145deg, #f2ede8, #d2c9c0);
+      letter-spacing: -0.02em;
+      background: linear-gradient(145deg, #e8edf8, #b8c8f0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      line-height: 1;
+      line-height: 1.1;
     }
 
     .name-title .tagline {
       font-weight: 300;
-      color: #9ca8b9;
-      font-size: 0.95rem;
-      letter-spacing: 0.8px;
-      padding-left: 1rem;
-      border-left: 2px solid #9f8bbf;
-      margin-top: 0.2rem;
+      color: #8a9bc0;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+      padding-left: 0.8rem;
+      border-left: 2px solid #5a7acf;
+      margin-top: 0.1rem;
     }
 
     .contacts {
       display: flex;
-      gap: 1.2rem;
+      gap: 0.7rem;
       flex-wrap: wrap;
     }
 
@@ -137,52 +138,54 @@
     }
 
     .contact-item {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 0.6rem 1.6rem;
+      background: rgba(60, 80, 180, 0.15);
+      border: 1px solid rgba(60, 80, 180, 0.2);
+      padding: 0.4rem 1rem;
       border-radius: 60px;
-      color: #ffffff !important;
+      color: #d0ddf5 !important;
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 0.78rem;
       backdrop-filter: blur(2px);
       transition: all 0.3s ease;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.4rem;
       cursor: pointer;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
     }
 
     .contact-item:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: #b38bff;
+      background: rgba(60, 80, 180, 0.3);
+      border-color: #6b8cff;
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 6px 25px rgba(179, 139, 255, 0.2);
+      box-shadow: 0 6px 25px rgba(74, 108, 247, 0.2);
       color: #ffffff !important;
     }
 
     .nav-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 0.9rem;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.6rem;
     }
 
     .nav-btn {
-      background: #1a1e26;
-      border: 1px solid #262c36;
-      padding: 0.9rem 0.2rem;
-      border-radius: 80px;
+      background: rgba(20, 28, 58, 0.8);
+      border: 1px solid #2a3a6a;
+      padding: 0.6rem 0.2rem;
+      border-radius: 60px;
       font-family: 'DM Sans', sans-serif;
       font-weight: 500;
-      font-size: 1.05rem;
-      color: #b7c5d9;
+      font-size: 0.85rem;
+      color: #9ab0dd;
       cursor: pointer;
       transition: all 0.2s cubic-bezier(0.15, 0.9, 0.25, 1.3);
       letter-spacing: 0.2px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       text-align: center;
       position: relative;
       overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
     }
 
     .nav-btn::before {
@@ -192,7 +195,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+      background: radial-gradient(circle, rgba(100, 140, 255, 0.05) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.3s;
       pointer-events: none;
@@ -203,30 +206,30 @@
     }
 
     .nav-btn:hover {
-      background: #262e3a;
-      color: #f0f4fe;
-      transform: translateY(-3px) scale(1.02);
-      border-color: #5d738d;
+      background: #2a3a6a;
+      color: #d0e0ff;
+      transform: translateY(-2px) scale(1.02);
+      border-color: #4a6cf7;
     }
 
     .nav-btn.active {
-      background: #6f5f9b;
+      background: #4a6cf7;
       color: #ffffff;
-      border-color: #b8a1d9;
-      box-shadow: 0 10px 24px -6px rgba(80, 50, 140, 0.4);
+      border-color: #7c9cff;
+      box-shadow: 0 8px 20px -6px rgba(74, 108, 247, 0.5);
       transform: translateY(-2px) scale(1.02);
       font-weight: 600;
     }
 
     .content-card {
-      background: rgba(12, 14, 19, 0.5);
+      background: rgba(10, 14, 30, 0.5);
       backdrop-filter: blur(4px);
       -webkit-backdrop-filter: blur(4px);
-      border-radius: 2.8rem;
-      padding: 2.2rem 2.8rem;
-      border: 1px solid rgba(255, 255, 255, 0.02);
-      box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.2), 0 8px 32px rgba(0, 0, 0, 0.2);
-      min-height: 200px;
+      border-radius: 2rem;
+      padding: 1.5rem 1.5rem;
+      border: 1px solid rgba(60, 80, 180, 0.06);
+      box-shadow: inset 0 4px 20px rgba(0, 0, 0, 0.3), 0 8px 32px rgba(0, 0, 0, 0.3);
+      min-height: 180px;
       display: flex;
       align-items: center;
       transition: all 0.2s;
@@ -238,146 +241,153 @@
     }
 
     @keyframes floatIn {
-      0% { opacity: 0; transform: translateY(22px) scale(0.96) rotateX(3deg); }
-      100% { opacity: 1; transform: translateY(0) scale(1) rotateX(0); }
+      0% { opacity: 0; transform: translateY(18px) scale(0.97); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     .content-inner h2 {
-      font-size: 2.2rem;
+      font-size: 1.6rem;
       font-weight: 500;
       letter-spacing: -0.02em;
-      color: #f0f3fa;
-      margin-bottom: 0.6rem;
-      background: linear-gradient(135deg, #ece4f0, #cfd8e8);
+      color: #e0ecff;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #dce6ff, #b0c8f5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       display: inline-block;
-      border-left: 5px solid #a68fd4;
-      padding-left: 1.4rem;
+      border-left: 4px solid #6b8cff;
+      padding-left: 1rem;
     }
 
     .content-inner p, .content-inner li {
-      color: #d3deee;
-      line-height: 1.7;
+      color: #bccce8;
+      line-height: 1.6;
       font-weight: 300;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
     }
 
     .content-inner ul {
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem 1.8rem;
-      margin-top: 0.3rem;
+      gap: 0.4rem 1.2rem;
+      margin-top: 0.2rem;
     }
 
     .content-inner ul li {
       position: relative;
-      padding-left: 1.2rem;
+      padding-left: 1rem;
+      font-size: 0.9rem;
     }
 
     .content-inner ul li::before {
       content: "◆";
       position: absolute;
-      left: -0.2rem;
-      color: #b197d9;
-      font-size: 0.8rem;
+      left: -0.1rem;
+      color: #6b8cff;
+      font-size: 0.7rem;
       top: 0.1rem;
     }
 
     .project-item {
-      background: rgba(30, 38, 50, 0.7);
+      background: rgba(20, 28, 58, 0.7);
       backdrop-filter: blur(2px);
-      padding: 0.6rem 1.6rem;
+      padding: 0.4rem 1.2rem;
       border-radius: 60px;
       display: inline-block;
-      margin-right: 0.5rem;
-      margin-bottom: 0.5rem;
-      border: 1px solid #38434f;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+      border: 1px solid #2a3a6a;
       font-weight: 400;
-      color: #dae3f2;
+      color: #bccce8;
       transition: 0.15s;
       cursor: pointer;
       text-decoration: none;
+      font-size: 0.85rem;
     }
 
     .project-item:hover {
-      background: #2f3b4b;
-      border-color: #7b8ba5;
+      background: #2a3a6a;
+      border-color: #6b8cff;
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(179, 139, 255, 0.15);
+      box-shadow: 0 4px 15px rgba(74, 108, 247, 0.2);
     }
 
     .project-item strong {
-      color: #cbb8ed;
+      color: #8aacff;
       font-weight: 500;
     }
 
     .contact-block {
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      gap: 0.6rem;
     }
 
     .contact-block .contact-row {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.8rem;
       flex-wrap: wrap;
-      padding: 0.5rem 1rem;
-      background: rgba(255, 255, 255, 0.02);
+      padding: 0.4rem 0.8rem;
+      background: rgba(60, 80, 180, 0.05);
       border-radius: 60px;
-      border: 1px solid rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(60, 80, 180, 0.08);
       transition: all 0.2s;
       cursor: pointer;
+      font-size: 0.9rem;
     }
 
     .contact-block .contact-row:hover {
-      background: rgba(255, 255, 255, 0.05);
-      border-color: rgba(255, 255, 255, 0.08);
+      background: rgba(60, 80, 180, 0.1);
+      border-color: rgba(60, 80, 180, 0.2);
     }
 
     .contact-block .contact-row .label {
-      color: #94a6be;
+      color: #7a94c8;
       font-weight: 300;
-      min-width: 70px;
+      min-width: 55px;
+      font-size: 0.85rem;
     }
 
     .contact-block .contact-row .value {
-      color: #e8edf5;
+      color: #d0ddf5;
       font-weight: 400;
+      font-size: 0.9rem;
+      word-break: break-all;
     }
 
     .extra-contacts {
       margin-top: 0.2rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 1.2rem 2.2rem;
-      color: #94a6be;
-      font-size: 0.95rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.02);
-      padding-top: 1.3rem;
+      gap: 0.8rem 1.5rem;
+      color: #7a94c8;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(60, 80, 180, 0.08);
+      padding-top: 1rem;
     }
 
     .extra-contact-link {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.01);
-      padding: 0.2rem 0.8rem 0.2rem 0.4rem;
+      gap: 0.4rem;
+      background: rgba(60, 80, 180, 0.03);
+      padding: 0.2rem 0.6rem 0.2rem 0.3rem;
       border-radius: 40px;
       transition: all 0.2s;
       cursor: pointer;
       text-decoration: none;
-      color: #94a6be;
+      color: #7a94c8;
       border: 1px solid transparent;
+      font-size: 0.85rem;
     }
 
     .extra-contact-link:hover {
-      background: rgba(255, 255, 255, 0.06);
-      border-color: rgba(255, 255, 255, 0.08);
-      color: #d0dcee;
+      background: rgba(60, 80, 180, 0.1);
+      border-color: rgba(60, 80, 180, 0.15);
+      color: #bccce8;
       transform: translateY(-1px);
     }
 
@@ -389,23 +399,24 @@
 
     .toast {
       position: fixed;
-      bottom: 2rem;
+      bottom: 1.5rem;
       left: 50%;
       transform: translateX(-50%) translateY(100px);
-      background: rgba(30, 35, 45, 0.95);
+      background: rgba(10, 14, 30, 0.95);
       backdrop-filter: blur(8px);
-      padding: 0.8rem 2rem;
+      padding: 0.6rem 1.5rem;
       border-radius: 60px;
-      color: #e0e8f0;
+      color: #d0ddf5;
       font-family: 'DM Sans', sans-serif;
       font-weight: 400;
-      font-size: 0.95rem;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      font-size: 0.85rem;
+      border: 1px solid rgba(60, 80, 180, 0.15);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
       opacity: 0;
       transition: all 0.4s cubic-bezier(0.08, 0.82, 0.17, 1);
       pointer-events: none;
       z-index: 1000;
+      white-space: nowrap;
     }
 
     .toast.show {
@@ -413,25 +424,259 @@
       transform: translateX(-50%) translateY(0);
     }
 
-    @media (max-width: 780px) {
-      .portfolio { padding: 1.8rem; }
-      .name-title h1 { font-size: 2.4rem; }
-      .nav-grid { grid-template-columns: repeat(2, 1fr); }
-      .content-card { padding: 1.8rem; }
-      .header-left { gap: 1rem; }
-      .avatar { width: 60px; height: 60px; }
+    /* Телефон үчүн адаптация - ылдыйга вертикалдуу */
+    @media (max-width: 768px) {
+      body {
+        padding: 0.6rem;
+        align-items: flex-start;
+        padding-top: 0.8rem;
+      }
+
+      .portfolio {
+        padding: 1.2rem 1rem;
+        border-radius: 2rem;
+        gap: 1.2rem;
+      }
+
+      .header {
+        gap: 0.8rem;
+        padding-bottom: 0.6rem;
+      }
+
+      .header-left {
+        gap: 0.7rem;
+      }
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+      }
+
+      .name-title h1 {
+        font-size: 1.5rem;
+      }
+
+      .name-title .tagline {
+        font-size: 0.7rem;
+        padding-left: 0.6rem;
+      }
+
+      .contacts {
+        gap: 0.5rem;
+        width: 100%;
+      }
+
+      .contact-item {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.8rem;
+        white-space: nowrap;
+      }
+
+      /* Телефондо вертикалдуу - 1 катар 1 ден */
+      .nav-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+
+      .nav-btn {
+        font-size: 0.85rem;
+        padding: 0.7rem 0.2rem;
+        border-radius: 50px;
+      }
+
+      .content-card {
+        padding: 1rem 1.2rem;
+        border-radius: 1.5rem;
+        min-height: 150px;
+      }
+
+      .content-inner h2 {
+        font-size: 1.3rem;
+        padding-left: 0.8rem;
+        border-left-width: 3px;
+      }
+
+      .content-inner p, .content-inner li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+      }
+
+      .content-inner ul {
+        gap: 0.3rem 0.8rem;
+      }
+
+      .content-inner ul li {
+        font-size: 0.82rem;
+        padding-left: 0.9rem;
+      }
+
+      .project-item {
+        font-size: 0.78rem;
+        padding: 0.3rem 0.9rem;
+      }
+
+      .contact-block .contact-row {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+        gap: 0.5rem;
+        border-radius: 40px;
+      }
+
+      .contact-block .contact-row .label {
+        font-size: 0.75rem;
+        min-width: 45px;
+      }
+
+      .contact-block .contact-row .value {
+        font-size: 0.8rem;
+      }
+
+      .extra-contacts {
+        gap: 0.6rem 1rem;
+        font-size: 0.78rem;
+        padding-top: 0.8rem;
+      }
+
+      .extra-contact-link {
+        font-size: 0.78rem;
+        padding: 0.15rem 0.5rem 0.15rem 0.3rem;
+      }
+
+      .toast {
+        font-size: 0.8rem;
+        padding: 0.5rem 1.2rem;
+        bottom: 1rem;
+      }
     }
 
     @media (max-width: 480px) {
-      .nav-grid { grid-template-columns: 1fr 1fr; }
-      .header { flex-direction: column; align-items: flex-start; }
-      .content-inner h2 { font-size: 1.6rem; }
-      .contact-block .contact-row {
-        flex-wrap: wrap;
-        padding: 0.5rem;
+      .portfolio {
+        padding: 0.8rem 0.7rem;
+        border-radius: 1.5rem;
+        gap: 1rem;
       }
-      .avatar { width: 50px; height: 50px; }
-      .extra-contacts { gap: 0.8rem; }
+
+      .header-left {
+        gap: 0.5rem;
+      }
+
+      .avatar {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+      }
+
+      .name-title h1 {
+        font-size: 1.2rem;
+      }
+
+      .name-title .tagline {
+        font-size: 0.6rem;
+        padding-left: 0.5rem;
+      }
+
+      .contacts {
+        gap: 0.4rem;
+      }
+
+      .contact-item {
+        font-size: 0.6rem;
+        padding: 0.25rem 0.6rem;
+      }
+
+      /* Кичинекей телефондо да вертикалдуу */
+      .nav-grid {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+      }
+
+      .nav-btn {
+        font-size: 0.8rem;
+        padding: 0.6rem 0.1rem;
+        border-radius: 40px;
+      }
+
+      .content-card {
+        padding: 0.8rem 1rem;
+        border-radius: 1.2rem;
+        min-height: 120px;
+      }
+
+      .content-inner h2 {
+        font-size: 1.1rem;
+        padding-left: 0.6rem;
+      }
+
+      .content-inner p, .content-inner li {
+        font-size: 0.78rem;
+      }
+
+      .content-inner ul li {
+        font-size: 0.75rem;
+      }
+
+      .project-item {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.7rem;
+        margin-right: 0.2rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .contact-block .contact-row {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.7rem;
+        gap: 0.3rem;
+      }
+
+      .contact-block .contact-row .label {
+        font-size: 0.65rem;
+        min-width: 35px;
+      }
+
+      .contact-block .contact-row .value {
+        font-size: 0.7rem;
+      }
+
+      .extra-contacts {
+        gap: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+        padding-top: 0.6rem;
+      }
+
+      .extra-contact-link {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.4rem 0.1rem 0.2rem;
+      }
+
+      .toast {
+        font-size: 0.7rem;
+        padding: 0.4rem 1rem;
+        bottom: 0.8rem;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .nav-grid {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+      }
+
+      .nav-btn {
+        font-size: 0.75rem;
+        padding: 0.5rem 0.1rem;
+        border-radius: 35px;
+      }
+
+      .name-title h1 {
+        font-size: 1rem;
+      }
+
+      .avatar {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+      }
     }
   </style>
 </head>
@@ -441,12 +686,11 @@
   <div class="header">
     <div class="header-left">
       <div class="avatar" id="avatarContainer">
-        <!-- Сүрөтүңүздүн шилтемесин алмаштырыңыз -->
         <img src="photo.jpg.jpeg" alt="Аксананын сүрөтү" id="profilePhoto" />
       </div>
       <div class="name-title">
         <h1>Аксана Матанова</h1>
-        <div class="tagline">Frontend веб-разработчик · ИТ-студент</div>
+        <div class="tagline">Frontend веб-разработчик</div>
       </div>
     </div>
     <div class="contacts">
@@ -460,25 +704,25 @@
   </div>
 
   <div class="nav-grid" id="navGrid">
-    <button class="nav-btn active" data-section="about" data-color="#6f5f9b">👤 Мен жөнүндө</button>
-    <button class="nav-btn" data-section="skills" data-color="#a87b5a">⚡ Көндүмдөр</button>
-    <button class="nav-btn" data-section="hobbies" data-color="#5f8f7a">🎯 Кызыкчылыктар</button>
-    <button class="nav-btn" data-section="projects" data-color="#bb8a6a">🚀 Долбоорлор</button>
-    <button class="nav-btn" data-section="contacts" data-color="#8a7a9f">📬 Байланыш</button>
+    <button class="nav-btn active" data-section="about" data-color="#4a6cf7">👤 Мен жөнүндө</button>
+    <button class="nav-btn" data-section="skills" data-color="#4a6cf7">⚡ Көндүмдөр</button>
+    <button class="nav-btn" data-section="hobbies" data-color="#4a6cf7">🎯 Кызыкчылыктар</button>
+    <button class="nav-btn" data-section="projects" data-color="#4a6cf7">🚀 Долбоорлор</button>
+    <button class="nav-btn" data-section="contacts" data-color="#4a6cf7">📬 Байланыш</button>
   </div>
 
   <div class="content-card" id="contentCard">
     <div class="content-inner" id="contentInner">
       <h2>👋 Салам, мен Аксана</h2>
       <p>Мен веб-разработканы изилдеп жаткан студентмин. HTML, CSS жана JavaScript аркылуу сайттарды түзөмүн. Мен жөнөкөй жана заманбап дизайндарды жасоого кызыгам жана өз долбоорлорумду иштеп чыгам.</p>
-      <p style="margin-top: 0.8rem; opacity: 0.6;">📍 Кыргызстан · 2 жылдык тажрыйба</p>
+      <p style="margin-top: 0.6rem; opacity: 0.6; font-size: 0.85rem;">📍 Кыргызстан · 2 жылдык тажрыйба</p>
     </div>
   </div>
 
   <!-- Кошумча байланыштар -->
   <div class="extra-contacts" id="extraContacts">
-    <a href="https://t.me/Akutay" target="_blank" class="extra-contact-link" data-url="https://t.me/Akutay">
-      <i>📌</i> Telegram: @Akutay
+    <a href="https://t.me/aku19_09" target="_blank" class="extra-contact-link" data-url="https://t.me/aku19_09">
+      <i>📌</i> Telegram: @aku19_09
     </a>
     <a href="https://instagram.com/aksynth" target="_blank" class="extra-contact-link" data-url="https://instagram.com/aksynth">
       <i>📷</i> Instagram: @aksynth
@@ -490,14 +734,13 @@
 
 <script>
   (function() {
-    // Бөлүмдөр үчүн мазмун
     const contentMap = {
       about: {
         title: '👋 Салам, мен Аксана',
         body: `
           <p>Мен веб-разработканы изилдеп жаткан студентмин. HTML, CSS жана JavaScript аркылуу сайттарды түзөмүн. Мен жөнөкөй жана заманбап дизайндарды жасоого кызыгам жана өз долбоорлорумду иштеп чыгам.</p>
-          <p style="margin-top: 0.8rem; opacity: 0.6;">📍 Кыргызстан · 2 жылдык тажрыйба</p>
-          <p style="margin-top: 0.5rem; background: rgba(255,255,255,0.02); padding: 0.6rem 1.2rem; border-radius: 40px; display: inline-block;">✨ Азыр HTML, CSS, JavaScriptти тереңдетип үйрөнүп жатам</p>
+          <p style="margin-top: 0.6rem; opacity: 0.6; font-size: 0.85rem;">📍 Кыргызстан · 2 жылдык тажрыйба</p>
+          <p style="margin-top: 0.4rem; background: rgba(60,80,180,0.1); padding: 0.4rem 1rem; border-radius: 40px; display: inline-block; font-size: 0.85rem; border: 1px solid rgba(60,80,180,0.1);">✨ HTML, CSS, JavaScriptти тереңдетип үйрөнүү</p>
         `
       },
       skills: {
@@ -506,46 +749,46 @@
           <ul>
             <li>HTML / CSS</li>
             <li>JavaScript</li>
-            <li>Адаптивдүү дизайн (телефон/ПК)</li>
+            <li>Адаптивдүү дизайн</li>
             <li>Сайттарды түзүү</li>
-            <li>Колдонуучу интерфейсинин дизайнынын негиздери</li>
+            <li>UI/UX негиздери</li>
           </ul>
-          <p style="margin-top: 1rem; color: #b2c4db;">Тынымсыз өнүгүп, жаңы технологияларды үйрөнүп жатам.</p>
+          <p style="margin-top: 0.8rem; color: #8aacff; font-size: 0.85rem;">Тынымсыз өнүгүп, жаңы технологияларды үйрөнүү.</p>
         `
       },
       hobbies: {
-        title: '🎯 Кызыкчылыктар жана шыктандыруучу нерселер',
+        title: '🎯 Кызыкчылыктар',
         body: `
-          <p>Иштен сырткары мен төмөнкүлөрдөн ырахат алам:</p>
+          <p>Иштен сырткары:</p>
           <ul>
             <li>🎧 Музыка угуу</li>
-            <li>🎬 Кино тармагында иштөө</li>
+            <li>🎬 Кино тармагы</li>
             <li>🎨 Сүрөт тартуу</li>
-            <li>📱 TikTok / YouTube көрүү</li>
-            <li>🏐 Волейбол ойноо</li>
+            <li>📱 TikTok / YouTube</li>
+            <li>🏐 Волейбол</li>
             <li>📚 Китеп окуу</li>
           </ul>
-          <p style="margin-top: 0.8rem;">Бул кызыкчылыктар мага шык таап, турмушта тең салмактуулукту сактоого жардам берет.</p>
+          <p style="margin-top: 0.6rem; font-size: 0.85rem;">Бул кызыкчылыктар мага шык таап, тең салмактуулукту сактоого жардам берет.</p>
         `
       },
       projects: {
         title: '🚀 Менин долбоорлорум',
         body: `
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 0.3rem;">
             <a href="https://aksanamatanova350-cmd.github.io/game/" target="_blank" class="project-item">
-              <strong>🧺 Түшүм жыйноо</strong> — JavaScript оюну
+              <strong>🧺 Түшүм жыйноо</strong>
             </a>
             <a href="https://aksanamatanova350-cmd.github.io/grafik/" target="_blank" class="project-item">
-              <strong>📋 Менин тапшырмаларым</strong> — канбан тактасы
+              <strong>📋 Тапшырмалар</strong>
             </a>
             <a href="https://aksanamatanova350-cmd.github.io/-/" target="_blank" class="project-item">
-              <strong>🔐 Сырсөз генератору</strong> — ойлоп табуучу сайт
+              <strong>🔐 Сырсөз генератору</strong>
             </a>
             <a href="https://aksanamatanova350-cmd.github.io/online-booking/" target="_blank" class="project-item">
-              <strong>📅 Онлайн брондоп алуу</strong> — брондоп алуу системасы
+              <strong>📅 Онлайн бронь</strong>
             </a>
           </div>
-          <p style="margin-top: 1.2rem;">Ар бир долбоор — бул менин веб-разработкадагы өсүшүмдүн бир кадамы.</p>
+          <p style="margin-top: 0.8rem; font-size: 0.85rem;">Ар бир долбоор — веб-разработкадагы өсүшүмдүн бир кадамы.</p>
         `
       },
       contacts: {
@@ -560,15 +803,15 @@
               <span class="label">📱 Телефон</span>
               <span class="value">+996 556 323 537</span>
             </div>
-            <div class="contact-row" onclick="window.open('https://t.me/Akutay','_blank')">
+            <div class="contact-row" onclick="window.open('https://t.me/aku19_09','_blank')">
               <span class="label">📌 Telegram</span>
-              <span class="value">@Akutay</span>
+              <span class="value">@aku19_09</span>
             </div>
             <div class="contact-row" onclick="window.open('https://instagram.com/aksynth','_blank')">
               <span class="label">📷 Instagram</span>
               <span class="value">@aksynth</span>
             </div>
-            <p style="margin-top: 0.8rem; color: #94a6be; font-size: 0.9rem;">📍 Кыргызстан · Жаңы мүмкүнчүлүктөргө дайым ачык!</p>
+            <p style="margin-top: 0.6rem; color: #7a94c8; font-size: 0.8rem;">📍 Кыргызстан · Жаңы мүмкүнчүлүктөргө ачык!</p>
           </div>
         `
       }
@@ -588,13 +831,12 @@
       }, 1500);
     }
 
-    // Бөлүмдөр боюнча навигация
     function setActiveSection(sectionId, buttonElement) {
       navButtons.forEach(btn => btn.classList.remove('active'));
 
       if (buttonElement) {
         buttonElement.classList.add('active');
-        const color = buttonElement.dataset.color || '#6f5f9b';
+        const color = buttonElement.dataset.color || '#4a6cf7';
         buttonElement.style.background = color;
         buttonElement.style.borderColor = color;
         navButtons.forEach(btn => {
@@ -624,7 +866,6 @@
       }
     });
 
-    // Кошумча байланыштарды басуу
     document.getElementById('extraContacts').addEventListener('click', function(e) {
       const link = e.target.closest('.extra-contact-link');
       if (link) {
@@ -632,7 +873,6 @@
       }
     });
 
-    // "Байланыш" бөлүмүндөгү байланыштарды басуу
     document.getElementById('contentInner').addEventListener('click', function(e) {
       const contactRow = e.target.closest('.contact-row');
       if (contactRow) {
@@ -640,15 +880,13 @@
       }
     });
 
-    // Аватарды басуу
     document.getElementById('avatarContainer').addEventListener('click', function() {
       showToast('📸 Бул сизсиз!');
     });
 
-    // Инициализация
     const initialActive = document.querySelector('.nav-btn.active');
     if (initialActive) {
-      const color = initialActive.dataset.color || '#6f5f9b';
+      const color = initialActive.dataset.color || '#4a6cf7';
       initialActive.style.background = color;
       initialActive.style.borderColor = color;
       const section = initialActive.dataset.section;
@@ -660,7 +898,7 @@
       const firstBtn = document.querySelector('.nav-btn[data-section="about"]');
       if (firstBtn) {
         firstBtn.classList.add('active');
-        const color = firstBtn.dataset.color || '#6f5f9b';
+        const color = firstBtn.dataset.color || '#4a6cf7';
         firstBtn.style.background = color;
         firstBtn.style.borderColor = color;
         setActiveSection('about', firstBtn);
